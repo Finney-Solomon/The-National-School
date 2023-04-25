@@ -1,6 +1,7 @@
 import {
   AppBar,
   Button,
+  Grid,
   Menu,
   MenuItem,
   Toolbar,
@@ -8,7 +9,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import logo from "../Images/HomePageImages/Logo.png";
-import SchoolName from "../Images/HomePageImages/SchoolName.png";
+
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -20,24 +21,24 @@ const Navbar = () => {
     setAnchorEl(null);
   };
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: "white" }} >
       <Toolbar>
-        <img
+
+      <Grid container spacing={2} alignItems="center">
+  <Grid item xs= {4}>
+  <img
           src={logo}
           alt="Logo"
-          style={{ marginRight: "10px", height: "50px" }}
+          style={{ marginRight: "0px", height: "70px" }}
         />
-
-        <img
-          src={SchoolName}
-          alt="School Name"
-          style={{ height: "40px", width: "320px" }}
-        />
-
+  </Grid>
+  <Grid item xs>
+  <>
         <Button
-          color="inherit"
+         
           onClick={handleMenuOpen}
-          style={{ marginLeft: "auto" }}
+          color="secondary"
+          variant="text"
         >
           About Us
         </Button>
@@ -51,10 +52,19 @@ const Navbar = () => {
             <MenuItem onClick={handleMenuClose}>School</MenuItem>
             <MenuItem onClick={handleMenuClose}>College</MenuItem>
           </Menu>
-        </>
-        <Button color="inherit" style={{ marginLeft: "auto" }}>
+        </></>
+  </Grid>
+  <Grid item xs>
+  <Button  color="secondary">
           Contact Us
         </Button>
+  </Grid>
+  <Grid item xs>
+  <Button color="secondary">
+          Contact Us
+        </Button>
+   </Grid>
+</Grid>
       </Toolbar>
     </AppBar>
   );
