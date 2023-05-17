@@ -1,18 +1,10 @@
+import { AccountCircle } from "@mui/icons-material";
+import { AppBar, Badge, Box, Grid, IconButton, Menu, MenuItem, Toolbar } from "@mui/material";
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Badge from "@mui/material/Badge";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
-import logo from "../Images/HomePageImages/Logo.png";
-import HomeIcon from '@mui/icons-material/Home';
-import { Grid } from "@mui/material";
+import logo from '../Images/HomePageImages/Logo.png'
+
+
+
 export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -83,7 +75,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <IconButton size="large" color="inherit">
           <Badge  color="error">
-            <MailIcon />
+            {/* <MailIcon /> */}
           </Badge>
         </IconButton>
         <p>Messages</p>
@@ -94,7 +86,7 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           <Badge  color="error">
-            <NotificationsIcon />
+            {/* <NotificationsIcon /> */}
           </Badge>
         </IconButton>
         <p>Notifications</p>
@@ -124,7 +116,7 @@ export default function PrimarySearchAppBar() {
           <img
             src={logo}
             alt="Logo"
-            style={{ height: "70px" }}
+            style={{ height: "100px" }}
           /></Grid>
  <Grid item xs={8}>
  <Grid container spacing={3} sx={{ display: { xs: "none", md: "flex" }}}  alignItems="center">
@@ -134,14 +126,14 @@ export default function PrimarySearchAppBar() {
               size="small"
               color="black"
             >
-                <HomeIcon />
+                {/* <HomeIcon /> */}
               <p>Home</p>
             </IconButton></Grid>
           <Grid item xs="auto"> <IconButton
               size="small"
               color="black"
             >
-                <NotificationsIcon />
+                {/* <NotificationsIcon /> */}
               <p>About us</p>
             </IconButton></Grid>    <Grid item xs="auto">
             <IconButton
@@ -149,14 +141,14 @@ export default function PrimarySearchAppBar() {
           
               color="black"
             >  
-                <NotificationsIcon />
+                {/* <NotificationsIcon /> */}
               <p>Management</p>
             </IconButton></Grid>    <Grid item xs="auto">   
             <IconButton
               size="small"
               color="black"
             > 
-                <NotificationsIcon />
+                {/* <NotificationsIcon /> */}
               <p>School Alumni</p>
             </IconButton>  </Grid>    
            <Grid item xs="auto">  
@@ -164,7 +156,7 @@ export default function PrimarySearchAppBar() {
               size="small"
               color="black"
             > 
-                <NotificationsIcon />
+                {/* <NotificationsIcon /> */}
               <p>Gallery</p>
             </IconButton></Grid>
 
@@ -186,7 +178,6 @@ export default function PrimarySearchAppBar() {
           </Grid>
 
 
-
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
            
@@ -195,7 +186,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleMobileMenuOpen}
               color="black"
             >
-              <MoreIcon />
+              {/* <MoreIcon /> */}
             </IconButton>
           </Box>
         </Toolbar>
